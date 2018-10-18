@@ -3,7 +3,7 @@
     <div>
       <logo/>
       <h1 class="title">
-        nuxt-icoo-demo
+        nuxt-icoo-demo <el-button>eee</el-button>
       </h1>
       <h2 class="subtitle">
         My great Nuxt.js project
@@ -32,7 +32,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang='scss'>
 
 .container {
   min-height: 100vh;
