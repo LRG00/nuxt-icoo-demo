@@ -23,3 +23,11 @@ asyncData和fetch获取的数据会挂载在window上
 9.store 获取数据
 和asyncData和fetch,都挂载在window上
 
+10. vue ssr工作原理
+10.1ssr概述
+  解决seo, 解决内容的快速展现的问题, 不会出现闪烁的效果
+10.1ssr实现的原理
+  挂载在window上，模版加数据，编译是在浏览器中完成的，服务端异步获取数据再同步岛浏览器端作对比
+10.1vue ssr的渲染流程
+
+  
