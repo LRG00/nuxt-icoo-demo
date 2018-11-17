@@ -4,7 +4,7 @@
       <nuxt-link to="about">去到about</nuxt-link>
       <ul>
         <li 
-          v-for="(item, index) in list" 
+          v-for="(item, index) in $store.state.a.list" 
           :key="index"
         >
           {{ item }}

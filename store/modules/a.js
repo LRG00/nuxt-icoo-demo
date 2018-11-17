@@ -1,28 +1,29 @@
-// import * as types from '../mutation-types'
+import * as types from '../mutation-types'
 
-// const state = {
-//   count: 2000
-// }
+const state = {
+  list: ['a', 'b', 'k']
+}
 
 // const getters = {
 //   count: state => state.count
 // }
 
-// const mutations = {
-//   [types.ADD] (state, count) {
-//     state.count++
-//   }
-// }
+const mutations = {
+  [types.ADD] (state, text) {
+    state.list.push(text)
+  }
+}
 
-// const actions = {
-//   add ({ commit }, val) {
-//     commit(types.ADD, val)
-//   }
-// }
+const actions = {
+  add ({ commit }, text) {
+    commit(types.ADD, text)
+  }
+}
 
-// export default {
-//   state,
-//   mutations,
-//   actions,
-//   getters
-// }
+export default {
+  // namespaced: true,
+  state,
+  mutations,
+  actions
+  // getters
+}

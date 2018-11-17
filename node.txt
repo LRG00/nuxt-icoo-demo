@@ -20,3 +20,6 @@ fetch主要用于store
 8.ssr剖析
 asyncData和fetch获取的数据会挂载在window上
 
+9.store 获取数据
+和asyncData和fetch,都挂载在window上
+
