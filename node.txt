@@ -30,4 +30,13 @@ asyncData和fetch获取的数据会挂载在window上
   挂载在window上，模版加数据，编译是在浏览器中完成的，服务端异步获取数据再同步岛浏览器端作对比
 10.1vue ssr的渲染流程
 
-  
+11.1 
+touch .babelrc
+{
+  "presets": ["es2015"]
+}
+11.2
+--exec babel-node
+"dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server --exec babel-node",
+会遇到[nodemon] failed to start process, "babel-node" exec not found 的错
+解决: npm install -g babel-cli
