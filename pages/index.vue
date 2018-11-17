@@ -1,7 +1,8 @@
 <template>
   <section class="container">
     <div>
-      <logo/>
+      <nuxt-link to="about">去到about</nuxt-link>
+      <!-- <logo/> -->
       <h1 class="title">
         nuxt-icoo-demo <el-button>eee</el-button>
       </h1>

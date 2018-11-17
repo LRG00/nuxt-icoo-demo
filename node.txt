@@ -1,0 +1,10 @@
+1.nuxt脚手架
+vue init nuxt-community/koa-yemplate nuxt-learn-demo
+
+2.了解nuxt的目录结构
+
+3.nuxt 路由 与 vue-router 一样
+pages 创建文件即创建路由 如pages/about
+
+4.layouts 布局
+使用 layout: '模版名'

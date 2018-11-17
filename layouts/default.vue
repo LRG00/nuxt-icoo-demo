@@ -1,9 +1,18 @@
 <template>
   <div>
     <nuxt/>
+    <my-footer />
   </div>
 </template>
-
+ <script>
+ import MyFooter from '../components/Footer'
+ export default {
+   components: {
+     MyFooter
+   }
+ }
+ </script>
+ 
 <style>
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
