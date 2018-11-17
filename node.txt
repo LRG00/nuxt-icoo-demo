@@ -11,3 +11,12 @@ pages 创建文件即创建路由 如pages/about
 
 5.nuxt.config.js
 引入html的head, 全局的css等
+
+6.引入store和koa-router
+
+7.asyncData和fetch 异步数据
+fetch主要用于store
+
+8.ssr剖析
+asyncData和fetch获取的数据会挂载在window上
+

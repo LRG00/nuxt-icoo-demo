@@ -2,33 +2,38 @@
   <section class="container">
     <div>
       <nuxt-link to="about">去到about</nuxt-link>
-      <!-- <logo/> -->
+      <ul>
+        <li 
+          v-for="(item, index) in list" 
+          :key="index"
+        >
+          {{ item }}
+        </li>
+      </ul>
       <h1 class="title">
         nuxt-icoo-demo <el-button>eee</el-button>
       </h1>
-      <h2 class="subtitle">
-        My great Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
     </div>
   </section>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import axios from 'axios'
 
 export default {
-  components: {
-    Logo
+  data() {
+    return {
+      list: ['1', '2']
+    }
+  },
+  async asyncData () {
+    let {status, data: { list }} = await axios.get('http://localhost:3000/users/bar')
+    console.log(list, 'ppp')
+    if (status === 200) {
+      return {
+        list
+      }
+    }
   }
 }
 </script>

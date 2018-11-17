@@ -2,6 +2,8 @@
 const Koa = require('koa')
 const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
+// 引入路由
+const users = require('./routes/users')
 
 const app = new Koa()
 const host = process.env.HOST || '127.0.0.1'
@@ -20,7 +22,9 @@ async function start() {
     const builder = new Builder(nuxt)
     await builder.build()
   }
-
+  // routes
+  app.use(users.routes(), users.allowedMethods())
+  
   app.use(ctx => {
     ctx.status = 200 // koa defaults to 404 when it sees that status is unset
 

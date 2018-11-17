@@ -15,9 +15,12 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.0.0",
+    "axios": "^0.18.0",
     "cross-env": "^5.2.0",
     "element-ui": "^2.4.6",
+    "eslint-plugin-html": "^3.2.2",
     "koa": "^2.5.2",
+    "koa-router": "^7.4.0",
     "node-sass": "4.9.4",
     "nuxt": "^2.0.0",
     "sass-loader": "7.1.0"
