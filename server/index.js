@@ -1,10 +1,15 @@
 
 // const Koa = require('koa')
 import Koa from 'koa'
+const mongoose = require('mongoose')
+const dbConfig = require('./dbs/config')
 const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
 // 引入路由
 const users = require('./routes/users')
+// mongoose
+mongoose.connect(dbConfig.dbs)
+mongoose.connection.on('connected', () => global.console.log('已启动mongo'))
 
 const app = new Koa()
 const host = process.env.HOST || '127.0.0.1'
